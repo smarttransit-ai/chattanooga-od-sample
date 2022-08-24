@@ -36,6 +36,6 @@ There are a few assumptions made to help in the process of sampleing the data:
 
 For example if a OD pair has 50 people travelling among them, then we sample 50 home and 50 work locations and randomly choose 50 start and return times in the manner described. Each of them forms a row of the dataset
 
-The generated dataset is ...
+The generated dataset is for the corresponding LODES data is [prob_matrix_lodes.csv](https://github.com/smarttransit-ai/chattanooga-od-sample/blob/main/data/prob_matrix_lodes.csv)
 
 The associated notebook - [movement_combinations.ipynb](https://github.com/smarttransit-ai/chattanooga-od-sample/blob/main/movement_combinations.ipynb)
