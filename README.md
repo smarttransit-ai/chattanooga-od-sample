@@ -34,8 +34,8 @@ There are a few assumptions made to help in the process of sampleing the data:
 2. The travel start time(go_time) is sampled randomly from 7AM to 9AM (at 15min intervals)
 3. The return time is sampled randomly from 4PM to 6PM (at 15min intervals)
 
-For example if a OD pair has 50 people travelling among them, then we sample 50 home and 50 work locations and randomly choose 50 start and return times in the manner described.
+For example if a OD pair has 50 people travelling among them, then we sample 50 home and 50 work locations and randomly choose 50 start and return times in the manner described. Each of them forms a row of the dataset
 
-The generated matrix is ...
+The generated dataset is ...
 
 The associated notebook - [movement_combinations.ipynb](https://github.com/smarttransit-ai/chattanooga-od-sample/blob/main/movement_combinations.ipynb)
