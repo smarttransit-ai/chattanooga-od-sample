@@ -31,5 +31,4 @@ There are a few assumptions made to help in the process of sampleing the data:
 1. For the LODES and Safegraph data, we find the number of people travelling between each OD pair, and randomly sample the home and work locations from the OSM locations (or Microsoft Buildings if needed).
 2. The travel start time(go_time) is sampled randomly from 7AM to 9AM (at 15min intervals)
 3. The return time is sampled randomly from 4PM to 6PM (at 15min intervals)
-4. 
 For example if a OD pair has 50 people travelling among them, then we sample 50 home and 50 work locations and randomly choose 50 start and return times in the manner described
