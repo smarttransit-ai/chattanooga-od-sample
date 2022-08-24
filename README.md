@@ -14,7 +14,8 @@ The geographic data of Hamilton county defines the area and boundaries of the ce
 
 These provide the information about the movement of people (the number of people moving, and their origin and destination CBG). 
 
-3. Residential and Work locations:
+3. Residential and Work locations
+
     The locations of residential and commercial(work) areas are obtained from OpenStreetMaps(OSM). They are obtained by using the [OSM Accomodation tags](https://wiki.openstreetmap.org/wiki/Key:building#Accommodation) and the python library OSMNX. [residential_locations.csv](https://github.com/smarttransit-ai/chattanooga-od-sample/blob/main/data/ham_residential_buildings2.csv)
     
     The work locations are obtained as a combination of the tags [commercial](https://wiki.openstreetmap.org/wiki/Key:building#Commercial), [civic/amenity](https://wiki.openstreetmap.org/wiki/Key:building#Civic/amenity), and the Safegraph POI (point of interest) locations. [work_locations.csv](https://github.com/smarttransit-ai/chattanooga-od-sample/blob/main/data/work_loc_poi_com_civ.csv)
@@ -32,4 +33,8 @@ There are a few assumptions made to help in the process of sampleing the data:
 2. The travel start time(go_time) is sampled randomly from 7AM to 9AM (at 15min intervals)
 3. The return time is sampled randomly from 4PM to 6PM (at 15min intervals)
 
-For example if a OD pair has 50 people travelling among them, then we sample 50 home and 50 work locations and randomly choose 50 start and return times in the manner described
+For example if a OD pair has 50 people travelling among them, then we sample 50 home and 50 work locations and randomly choose 50 start and return times in the manner described.
+
+The generated matrix is ...
+
+The associated notebook - [movement_combinations.ipynb](https://github.com/smarttransit-ai/chattanooga-od-sample/blob/main/movement_combinations.ipynb)
