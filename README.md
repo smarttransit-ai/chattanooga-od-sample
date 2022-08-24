@@ -4,7 +4,7 @@ The geographic area under consideration is the Hamilton county, Tennessee. The c
 
 ## The data
 1. People movement
-<t>  a. [LODES dataset]()<br> 
+  a. [LODES dataset]()<br> 
   b. Safegraph dataset
 
 These provide the information about the movement of people (the number of people moving, and their origin and destination CBG). 
