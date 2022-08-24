@@ -6,18 +6,18 @@ The geographic area under consideration is the Hamilton county, Tennessee. The c
 
 1. Geographic data
 
-The geographic data of Hamilton county defines the area and boundaries of the census tracts and CBGs. It also provides unique GEOIDs for each zone under consideration, which we can further use to find relevant regions in other datasets. It is in .shp format.
+The geographic data of Hamilton county defines the area and boundaries of the census tracts and CBGs. It also provides unique GEOIDs for each zone under consideration, which we can further use to find relevant regions in other datasets. It is initially in .shp format and has been stored in [ham_cbg.csv](https://github.com/smarttransit-ai/chattanooga-od-sample/blob/main/data/ham_cbg.csv).
 
 2. People movement<br>
-  a. [LODES dataset]()<br> 
+  a. [LODES dataset](https://github.com/smarttransit-ai/chattanooga-od-sample/blob/main/data/hamilton_lodes_2019.zip)<br> 
   b. Safegraph dataset
 
 These provide the information about the movement of people (the number of people moving, and their origin and destination CBG). 
 
 3. Residential and Work locations
 
-The locations of residential and commercial(work) areas are obtained from OpenStreetMaps(OSM). They are obtained by using the [OSM Accomodation tags](https://wiki.openstreetmap.org/wiki/Key:building#Accommodation) and the python library OSMNX. 
-The work locations are obtained as a combination of the tags [commercial](https://wiki.openstreetmap.org/wiki/Key:building#Commercial), [civic/amenity](https://wiki.openstreetmap.org/wiki/Key:building#Civic/amenity), and the Safegraph POI (point of interest) locations.
+The locations of residential and commercial(work) areas are obtained from OpenStreetMaps(OSM). They are obtained by using the [OSM Accomodation tags](https://wiki.openstreetmap.org/wiki/Key:building#Accommodation) and the python library OSMNX. [residential_locations.csv](https://github.com/smarttransit-ai/chattanooga-od-sample/blob/main/data/ham_residential_buildings2.csv)
+The work locations are obtained as a combination of the tags [commercial](https://wiki.openstreetmap.org/wiki/Key:building#Commercial), [civic/amenity](https://wiki.openstreetmap.org/wiki/Key:building#Civic/amenity), and the Safegraph POI (point of interest) locations. [work_locations.csv](https://github.com/smarttransit-ai/chattanooga-od-sample/blob/main/data/work_loc_poi_com_civ.csv)
 4. Microsoft Buildings dataset (complements to OSM locations)
 
 These are the locations of all buildings in Hamilton county, obtained from [Microsoft Building Footprints](https://github.com/Microsoft/USBuildingFootprints), and are **not labelled** as home/work places. These locations are used in lieu of OSM labelled locations only in case the concerned CBG has no home/work locations from OSM. 
