@@ -22,7 +22,7 @@ These provide the information about the movement of people (the number of people
 
 4. Microsoft Buildings dataset (complements to OSM locations)
 
-These are the locations of all buildings in Hamilton county, obtained from [Microsoft Building Footprints](https://github.com/Microsoft/USBuildingFootprints), and are **not labelled** as home/work places. These locations are used in lieu of OSM labelled locations only in case the concerned CBG has no home/work locations from OSM. 
+    These are the locations of all buildings in Hamilton county, obtained from [Microsoft Building Footprints](https://github.com/Microsoft/USBuildingFootprints), and are **not labelled** as home/work places. These locations are used in lieu of OSM labelled locations only in case the concerned CBG has no home/work locations from OSM. 
 The data extraction is done as in [read_ms_buildings.ipynb](https://github.com/smarttransit-ai/chattanooga-od-sample/blob/main/read_ms_buildings.ipynb).
 
 ## Deriving the OD matrix
