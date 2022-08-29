@@ -36,7 +36,7 @@ There are a few assumptions made to help in the process of sampleing the data:
 
 For example if an OD pair has 50 people travelling among them, then we sample 50 home and 50 work locations and randomly choose 50 start and return times in the manner described. 
 
-**TLDR**: *Each row of the dataset represents 1 person travelling from their home to work, with randomly generated times for when the person leaves their home and when they leave their workplace for returning back.*
+**TLDR**: *Each row of the dataset represents 1 person travelling from their home to work, with randomly generated times (within specified time windows and intervals) for when the person leaves their home and when they leave their workplace for returning back.*
 
 The generated dataset is for the corresponding LODES data is [prob_matrix_lodes.csv](https://github.com/smarttransit-ai/chattanooga-od-sample/blob/main/data/prob_matrix_lodes.csv)
 
