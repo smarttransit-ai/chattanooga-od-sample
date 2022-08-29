@@ -29,6 +29,8 @@ The data extraction is done as in [read_ms_buildings.ipynb](https://github.com/s
 
 We intend to find the Origin Destination (OD) matrix for Hamilton county. The home location acts as the **origin**, while the work location acts as the **destination**. It is obtained as a combination of the home location, work location, travel start time, and their return time. It is found by uniform sampling across the home and commercial locations.
 
+**Note**: A ranodom seed of 42 is used for all the random samples.
+
 There are a few assumptions made to help in the process of sampleing the data:
 1. For the LODES and Safegraph data, we find the number of people travelling between each OD pair, and randomly sample the home and work locations from the OSM locations (or Microsoft Buildings if needed).
 2. The travel start time(go_time) is sampled randomly from 7AM to 9AM (at 15min intervals)
