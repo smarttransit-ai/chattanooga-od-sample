@@ -38,6 +38,6 @@ For example if an OD pair has 50 people travelling among them, then we sample 50
 
 **TLDR**: *Each row of the dataset represents 1 person travelling from their home to work, with randomly generated times (within specified time windows and intervals) for when the person leaves their home and when they leave their workplace for returning back.*
 
-The generated dataset is for the corresponding LODES data is [prob_matrix_lodes.csv](https://github.com/smarttransit-ai/chattanooga-od-sample/blob/main/data/prob_matrix_lodes.csv)
+The generated dataset is for the corresponding LODES data is [lodes_combinations.csv](https://github.com/smarttransit-ai/chattanooga-od-sample/blob/main/data/lodes_combinations.csv  )
 
-The associated notebook - [movement_combinations.ipynb](https://github.com/smarttransit-ai/chattanooga-od-sample/blob/main/movement_combinations.ipynb)
+The associated notebook - [lodes_combs.ipynb](https://github.com/smarttransit-ai/chattanooga-od-sample/blob/main/lodes_combs.ipynb)
