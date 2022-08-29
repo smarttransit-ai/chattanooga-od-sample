@@ -34,7 +34,7 @@ There are a few assumptions made to help in the process of sampleing the data:
 2. The travel start time(go_time) is sampled randomly from 7AM to 9AM (at 15min intervals)
 3. The return time is sampled randomly from 4PM to 6PM (at 15min intervals)
 
-For example if an OD pair has 50 people travelling among them, then we sample 50 home and 50 work locations and randomly choose 50 start and return times in the manner described. Each of them forms a row of the dataset
+For example if an OD pair has 50 people travelling among them, then we sample 50 home and 50 work locations and randomly choose 50 start and return times in the manner described. *Each row of the dataset represents 1 person travelling from their home to work and back, at randomly generated times.*
 
 The generated dataset is for the corresponding LODES data is [prob_matrix_lodes.csv](https://github.com/smarttransit-ai/chattanooga-od-sample/blob/main/data/prob_matrix_lodes.csv)
 
