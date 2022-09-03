@@ -38,7 +38,7 @@ There are a few assumptions made to help in the process of sampleing the data:
 
 For example if an OD pair has 50 people travelling among them, then we sample 50 home and 50 work locations and randomly choose 50 start and return times in the manner described. 
 
-## Exlanation of the generated OD data
+## Explanation of the generated OD data
 
 Each row in [lodes_combinations.csv](https://github.com/smarttransit-ai/chattanooga-od-sample/blob/main/data/lodes_combinations.csv) & [sg_combinations](https://github.com/smarttransit-ai/chattanooga-od-sample/blob/main/data/sg_combinations.zip) is the movement of a person, leaving home in the morning for work, and returning from work to their homes, in the evening.
 
