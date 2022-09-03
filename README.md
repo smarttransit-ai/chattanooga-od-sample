@@ -62,4 +62,4 @@ The columns(with their datatypes) are:
 
 The generated dataset is for the corresponding LODES data is [lodes_combinations.csv](https://github.com/smarttransit-ai/chattanooga-od-sample/blob/main/data/lodes_combinations.csv  )
 
-The associated notebook - [lodes_combs.ipynb](https://github.com/smarttransit-ai/chattanooga-od-sample/blob/main/lodes_combs.ipynb)
+The associated notebook - [lodes_combs.ipynb](lodes_combs.ipynb)
