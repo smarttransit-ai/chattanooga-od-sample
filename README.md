@@ -38,6 +38,26 @@ There are a few assumptions made to help in the process of sampleing the data:
 
 For example if an OD pair has 50 people travelling among them, then we sample 50 home and 50 work locations and randomly choose 50 start and return times in the manner described. 
 
+## Exlanation of the generated OD data
+
+Each row in [lodes_combinations.csv](https://github.com/smarttransit-ai/chattanooga-od-sample/blob/main/data/lodes_combinations.csv) & [sg_combinations](https://github.com/smarttransit-ai/chattanooga-od-sample/blob/main/data/sg_combinations.zip) is the movement of a person, leaving home in the morning for work, and returning from work to their homes, in the evening.
+
+The columns(with their datatypes) are: 
+* h_geocode(string): The GEOID of the person's home CBG
+* w_geocode(string): The GEOID of the person's work CBG
+* total_jobs(float): the total number of people moving for jobs between the h_geocode and w_geocode (its sum gives us the total number of people moving; can be ignored for simplicity purposes)
+* home_loc_lat(float): latitude of chosen home location
+* home_loc_lon(float): longitude of chosen home location
+* work_loc_lat(float): latitude of chosen work location
+* work_loc_lon(float): longitude of chosen work location
+* go_time(Timestamp): the randomly chosen time of leaving home for job, in the morning
+* go_time_str(string): go_time in 24 hour format (as a string)
+* return_time(Timestamp): the randomly chosen time of leaving job for returning home, in the evening
+* return_time_str(string): return_time in 24 hour format (as a string)
+* home_geom(Point): shapely point of home location
+* work_geom(Point): shapely point of work location
+
+
 **TLDR**: *Each row of the dataset represents 1 person travelling from their home to work, with randomly generated times (within specified time windows and intervals) for when the person leaves their home and when they leave their workplace for returning back.*
 
 The generated dataset is for the corresponding LODES data is [lodes_combinations.csv](https://github.com/smarttransit-ai/chattanooga-od-sample/blob/main/data/lodes_combinations.csv  )
