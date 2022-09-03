@@ -6,24 +6,24 @@ The geographic area under consideration is the Hamilton county, Tennessee. The c
 
 1. Geographic data
 
-The geographic data of Hamilton county defines the area and boundaries of the census tracts and CBGs. It also provides unique GEOIDs for each zone under consideration, which we can further use to find relevant regions in other datasets. It is initially in .shp format and has been stored in [ham_cbg.csv](https://github.com/smarttransit-ai/chattanooga-od-sample/blob/main/data/ham_cbg.csv).
+The geographic data of Hamilton county defines the area and boundaries of the census tracts and CBGs. It also provides unique GEOIDs for each zone under consideration, which we can further use to find relevant regions in other datasets. It is initially in .shp format and has been stored in [ham_cbg.csv](data/ham_cbg.csv).
 
 2. People movement<br>
-  a. [LODES dataset](https://github.com/smarttransit-ai/chattanooga-od-sample/blob/main/data/hamilton_lodes_2019.zip)<br> 
+  a. [LODES dataset](data/hamilton_lodes_2019.zip)<br> 
   b. Safegraph dataset
 
 These provide the information about the movement of people (the number of people moving, and their origin and destination CBG). 
 
 3. Residential and Work locations
 
-    The locations of residential and commercial(work) areas are obtained from OpenStreetMaps(OSM). They are obtained by using the [OSM Accomodation tags](https://wiki.openstreetmap.org/wiki/Key:building#Accommodation) and the python library OSMNX. ([residential_locations.csv](https://github.com/smarttransit-ai/chattanooga-od-sample/blob/main/data/ham_residential_buildings2.csv))
+    The locations of residential and commercial(work) areas are obtained from OpenStreetMaps(OSM). They are obtained by using the [OSM Accomodation tags](https://wiki.openstreetmap.org/wiki/Key:building#Accommodation) and the python library OSMNX. ([residential_locations.csv](data/ham_residential_buildings2.csv))
     
-    The work locations are obtained as a combination of the tags [commercial](https://wiki.openstreetmap.org/wiki/Key:building#Commercial), [civic/amenity](https://wiki.openstreetmap.org/wiki/Key:building#Civic/amenity), and the Safegraph POI (point of interest) locations. ([work_locations.csv](https://github.com/smarttransit-ai/chattanooga-od-sample/blob/main/data/work_loc_poi_com_civ.csv))
+    The work locations are obtained as a combination of the tags [commercial](https://wiki.openstreetmap.org/wiki/Key:building#Commercial), [civic/amenity](https://wiki.openstreetmap.org/wiki/Key:building#Civic/amenity), and the Safegraph POI (point of interest) locations. ([work_locations.csv](data/work_loc_poi_com_civ.csv))
 
 4. Microsoft Buildings dataset (complements to OSM locations)
 
     These are the locations of all buildings in Hamilton county, obtained from [Microsoft Building Footprints](https://github.com/Microsoft/USBuildingFootprints), and are **not labelled** as home/work places. These locations are used in lieu of OSM labelled locations only in case the concerned CBG has no home/work locations from OSM. 
-The data extraction is done as in [read_ms_buildings.ipynb](https://github.com/smarttransit-ai/chattanooga-od-sample/blob/main/read_ms_buildings.ipynb).
+The data extraction is done as in [read_ms_buildings.ipynb](read_ms_buildings.ipynb).
 
 ## Deriving the OD matrix
 
@@ -40,7 +40,7 @@ For example if an OD pair has 50 people travelling among them, then we sample 50
 
 ## Explanation of the generated OD data
 
-Each row in [lodes_combinations.csv](https://github.com/smarttransit-ai/chattanooga-od-sample/blob/main/data/lodes_combinations.csv) & [sg_combinations](https://github.com/smarttransit-ai/chattanooga-od-sample/blob/main/data/sg_combinations.zip) is the movement of a person, leaving home in the morning for work, and returning from work to their homes, in the evening.
+Each row in [lodes_combinations.csv](data/lodes_combinations.csv) & [sg_combinations](data/sg_combinations.zip) is the movement of a person, leaving home in the morning for work, and returning from work to their homes, in the evening.
 
 The columns(with their datatypes) are: 
 * h_geocode(string): The GEOID of the person's home CBG
@@ -60,6 +60,6 @@ The columns(with their datatypes) are:
 
 **TLDR**: *Each row of the dataset represents 1 person travelling from their home to work, with randomly generated times (within specified time windows and intervals) for when the person leaves their home and when they leave their workplace for returning back.*
 
-The generated dataset is for the corresponding LODES data is [lodes_combinations.csv](https://github.com/smarttransit-ai/chattanooga-od-sample/blob/main/data/lodes_combinations.csv  )
+The generated dataset is for the corresponding LODES data is [lodes_combinations.csv](data/lodes_combinations.csv  )
 
 The associated notebook - [lodes_combs.ipynb](lodes_combs.ipynb)
