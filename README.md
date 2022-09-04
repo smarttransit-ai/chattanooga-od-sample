@@ -40,26 +40,24 @@ For example if an OD pair has 50 people travelling among them, then we sample 50
 
 ## Explanation of the generated OD data
 
-Each row in [lodes_combinations.csv](data/lodes_combinations.csv) & [sg_combinations](data/sg_combinations.zip) is the movement of a person, leaving home in the morning for work, and returning from work to their homes, in the evening.
+The generated data has been converted to parquet and is available at the following locations
+* [data\lodes_od_based_on_job.parquet](lodes_od_based_on_job.parquet)
+* [data\safegraph_od_weekday.parquet](safegraph_od_weekday.parquet)
+
+Each row in either dataset represents a single trip by one person. In the case of lodes dataset, the trip represent movement to the job location and then back to home. Here are the key columns.
 
 The columns(with their datatypes) are: 
-* h_geocode(string): The GEOID of the person's home CBG
-* w_geocode(string): The GEOID of the person's work CBG
-* total_jobs(float): the total number of people moving for jobs between the h_geocode and w_geocode (its sum gives us the total number of people moving; can be ignored for simplicity purposes)
+* h_geocode(int): The GEOID of the person's home CBG
+* w_geocode(int): The GEOID of the person's work CBG
+* total_jobs(float): the total number of people moving for jobs between the h_geocode and w_geocode (its sum gives us the total number of people moving; can be ignored for simplicity purposes).
+ * Note in case of the safegraph data the corresponding column is frequency. It shows the cumulative movement between the two block groups.
 * home_loc_lat(float): latitude of chosen home location
 * home_loc_lon(float): longitude of chosen home location
 * work_loc_lat(float): latitude of chosen work location
 * work_loc_lon(float): longitude of chosen work location
-* go_time(Timestamp): the randomly chosen time of leaving home for job, in the morning
 * go_time_str(string): go_time in 24 hour format (as a string)
-* return_time(Timestamp): the randomly chosen time of leaving job for returning home, in the evening
 * return_time_str(string): return_time in 24 hour format (as a string)
 * home_geom(Point): shapely point of home location
 * work_geom(Point): shapely point of work location
 
-
-**TLDR**: *Each row of the dataset represents 1 person travelling from their home to work, with randomly generated times (within specified time windows and intervals) for when the person leaves their home and when they leave their workplace for returning back.*
-
-The generated dataset is for the corresponding LODES data is [lodes_combinations.csv](data/lodes_combinations.csv  )
-
-The associated notebook - [lodes_combs.ipynb](lodes_combs.ipynb)
+The associated notebook for the lodes based analysis is - [lodes_combs.ipynb](lodes_combs.ipynb)
