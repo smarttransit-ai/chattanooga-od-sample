@@ -10,7 +10,7 @@ The geographic data of Hamilton county defines the area and boundaries of the ce
 
 2. People movement<br>
   a. [LODES dataset](data/hamilton_lodes_2019.zip)<br> 
-  b. Safegraph dataset
+  b. Safegraph dataset (our data is for Jan 2021-Mar2021)
 
 These provide the information about the movement of people (the number of people moving, and their origin and destination CBG). 
 
