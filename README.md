@@ -64,4 +64,4 @@ The associated notebook for the lodes based analysis is - [lodes_combs.ipynb](lo
 
 Here's a time distribution of the people moving from LODES data: 
 
-![lodes poeple movement](lodes_movement_barplot.png)
+![lodes poeple movement](lodes_moves_barplot.png)
